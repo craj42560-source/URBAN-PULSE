@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive PulseFest Guide - Schedules, Stage lineups, and live festival map.">
+  <title>Urban Pulse | Interactive Festival Guide</title>
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-theme="light">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="navbar-sticky" id="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Urban Pulse Home">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">URBAN<span>PULSE</span></span>
+      </a>
+      <nav class="nav-menu" id="primary-navigation" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="discover.html" class="nav-link">Discover Events</a></li>
+          <li><a href="festival.html" class="nav-link active" aria-current="page">Festival Guide</a></li>
+          <li><a href="booking.html" class="nav-link">Tickets & Booking</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="btn-icon" aria-label="Toggle Dark/Light Mode" type="button"><span class="theme-icon">🌙</span></button>
+        <a href="booking.html" class="btn btn-primary btn-sm">Reserve Now</a>
+        <button class="mobile-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle Navigation Menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-header bg-dark text-light">
+      <div class="container">
+        <span class="badge badge-accent">PulseFest 2026 Interactive Guide</span>
+        <h1>Festival Schedule & Live Map</h1>
+        <p>Explore artists, click timeslots to trigger dynamic stage profiles, and locate festival amenities.</p>
+
+        <!-- Countdown Timer -->
+        <div class="countdown-container margin-top-md" aria-live="polite">
+          <span>Festival Countdown:</span>
+          <div class="countdown-timer" id="festival-timer">
+            <div><strong id="timer-days">00</strong><small>Days</small></div>
+            <div><strong id="timer-hours">00</strong><small>Hrs</small></div>
+            <div><strong id="timer-mins">00</strong><small>Mins</small></div>
+            <div><strong id="timer-secs">00</strong><small>Secs</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Schedule & Dynamic Panel -->
+    <section class="section">
+      <div class="container">
+        <div class="festival-layout">
+          <!-- Timeline / Stage selector -->
+          <div class="schedule-column">
+            <h2>Stage Lineups & Timeslots</h2>
+            <p>Click any scheduled slot below to reveal artist details and stage details.</p>
+            
+            <div class="stage-block margin-top-md">
+              <h3 class="stage-title stage-main">⚡ Pulse Main Stage</h3>
+              <div class="timeslot-list">
+                <button class="timeslot-btn" data-artist="the-synthetix">
+                  <span class="slot-time">18:00 - 19:30</span>
+                  <span class="slot-artist">The Synthetix</span>
+                  <span class="slot-genre">Synthwave / Electronic</span>
+                </button>
+                <button class="timeslot-btn" data-artist="lunar-echoes">
+                  <span class="slot-time">20:00 - 21:30</span>
+                  <span class="slot-artist">Lunar Echoes</span>
+                  <span class="slot-genre">Indie Rock / Ambient</span>
+                </button>
+                <button class="timeslot-btn" data-artist="cyber-pulse">
+                  <span class="slot-time">22:00 - 23:30</span>
+                  <span class="slot-artist">Cyber Pulse Headliner</span>
+                  <span class="slot-genre">Cyberpunk / EDM</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="stage-block margin-top-md">
+              <h3 class="stage-title stage-acoustic">🌿 Solar Acoustic Grove</h3>
+              <div class="timeslot-list">
+                <button class="timeslot-btn" data-artist="maya-sol">
+                  <span class="slot-time">17:00 - 18:15</span>
+                  <span class="slot-artist">Maya Sol</span>
+                  <span class="slot-genre">Acoustic / Neo-Soul</span>
+                </button>
+                <button class="timeslot-btn" data-artist="groove-bohemian">
+                  <span class="slot-time">19:00 - 20:30</span>
+                  <span class="slot-artist">Groove Bohemian</span>
+                  <span class="slot-genre">Folk Fusion</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Reveal Panel (jQuery Controlled) -->
+          <div class="panel-column">
+            <h2>Artist & Stage Info</h2>
+            <div id="default-panel-notice" class="glass-card text-center padding-lg">
+              <span class="icon-large">👆</span>
+              <h3>Select a Timeslot</h3>
+              <p>Click any slot on the left schedule to trigger animated artist details.</p>
+            </div>
+
+            <!-- Dynamic Detail Container -->
+            <div id="artist-detail-panel" class="glass-card artist-panel hidden">
+              <div class="artist-media">
+                <img id="artist-img" src="" alt="Artist photo" class="responsive-img">
+                <span id="artist-genre-badge" class="badge badge-accent">Genre</span>
+              </div>
+              <div class="artist-content">
+                <h3 id="artist-name">Artist Name</h3>
+                <p class="meta-line">⏰ <span id="artist-time">Time</span> | 📍 <span id="artist-stage">Stage</span></p>
+                <p id="artist-bio" class="margin-top-sm">Artist biography goes here.</p>
+                <div class="fact-box margin-top-sm">
+                  <strong>💡 Interesting Fact:</strong>
+                  <p id="artist-fact">Fact detail</p>
+                </div>
+                <div class="ticket-status-box margin-top-sm">
+                  <span>Ticket Status: <strong id="artist-tickets">Available</strong></span>
+                </div>
+                <div class="margin-top-md">
+                  <a href="booking.html" class="btn btn-primary btn-block">Reserve Tickets for this Stage</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Festival Map Section -->
+    <section class="section section-cream">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tagline">Grounds Map</span>
+          <h2 class="section-title">Interactive Festival Map</h2>
+          <p>Click pins to locate stages, medical tents, food zones, and rest areas.</p>
+        </div>
+
+        <div class="map-wrapper glass-card margin-top-md">
+          <div class="map-container" id="festival-map">
+            <!-- Pins -->
+            <button class="map-pin pin-stage1" data-location="Main Stage Grounds" data-desc="Capacity: 10,000. Features main light shows and bar zone." style="top: 30%; left: 45%;" type="button" aria-label="Main Stage Pin">⚡</button>
+            <button class="map-pin pin-stage2" data-location="Solar Acoustic Grove" data-desc="Capacity: 2,500. Chill acoustic area with beanbags and organic tea." style="top: 60%; left: 25%;" type="button" aria-label="Acoustic Grove Pin">🌿</button>
+            <button class="map-pin pin-food" data-location="Artisan Food Market" data-desc="40+ international street food vendors, vegan options, craft beer." style="top: 70%; left: 70%;" type="button" aria-label="Food Market Pin">🍔</button>
+            <button class="map-pin pin-info" data-location="First Aid & Info Point" data-desc="24/7 medical support, lost & found, water refill station." style="top: 20%; left: 80%;" type="button" aria-label="Info Point Pin">ℹ️</button>
+          </div>
+          <div id="map-info-box" class="map-info-box hidden">
+            <h4 id="map-location-title">Location Name</h4>
+            <p id="map-location-desc">Location description details.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Urban Pulse Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="btn-floating" aria-label="Scroll back to top" type="button">&uarr;</button>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <script src="js/festival.js"></script>
+</body>
+</html>

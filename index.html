@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Urban Pulse - Premium Local Event, Music, and Cultural Discovery Platform">
+  <title>Urban Pulse | Discover Live Culture & Events</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-theme="light">
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar" role="region" aria-label="Announcement">
+    <p>🎉 <strong>PulseFest 2026</strong> tickets are live! Use code <code>URBAN10</code> for 10% off. <a href="booking.html">Book Tickets &rarr;</a></p>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="navbar-sticky" id="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Urban Pulse Home">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">URBAN<span>PULSE</span></span>
+      </a>
+
+      <nav class="nav-menu" id="primary-navigation" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+          <li><a href="discover.html" class="nav-link">Discover Events</a></li>
+          <li><a href="festival.html" class="nav-link">Festival Guide</a></li>
+          <li><a href="booking.html" class="nav-link">Tickets & Booking</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="btn-icon" aria-label="Toggle Dark/Light Mode" type="button">
+          <span class="theme-icon">🌙</span>
+        </button>
+        <a href="booking.html" class="btn btn-primary btn-sm">Reserve Now</a>
+        <button class="mobile-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle Navigation Menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-backdrop">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+      </div>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <span class="badge badge-accent fade-in">Urban Event Discovery</span>
+          <h1 class="hero-title fade-in-up">Experience the Unseen Rhythm of Your City</h1>
+          <p class="hero-lead fade-in-up delay-1">
+            Immerse yourself in live music, underground festivals, artisan markets, and local street culture curated for curious minds.
+          </p>
+          <div class="hero-cta-group fade-in-up delay-2">
+            <a href="discover.html" class="btn btn-primary btn-lg">Explore Events</a>
+            <a href="festival.html" class="btn btn-glass btn-lg">Interactive Festival Guide</a>
+          </div>
+          <div class="hero-stats fade-in-up delay-3">
+            <div class="stat-item">
+              <span class="stat-number" data-count="150">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Monthly Events</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-count="45">0</span><span class="stat-plus">k</span>
+              <span class="stat-label">Active Attendees</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-count="12">0</span><span class="stat-plus"></span>
+              <span class="stat-label">City Venues</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual fade-in delay-2">
+          <div class="glass-card hero-image-card">
+            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80" alt="Live concert crowd under atmospheric lighting" class="responsive-img">
+            <div class="floating-badge badge-top-right">
+              <span class="pulse-dot"></span> Live Now
+            </div>
+            <div class="hero-card-caption">
+              <h3>Neon Nights Festival</h3>
+              <p>Warehouse District • Aug 14 - 16</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carousel / Featured Section -->
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-tagline">Handpicked Highlights</span>
+            <h2 class="section-title">Featured City Experiences</h2>
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-btn prev-btn" aria-label="Previous Slide">&larr;</button>
+            <button class="carousel-btn next-btn" aria-label="Next Slide">&rarr;</button>
+          </div>
+        </div>
+
+        <div class="carousel-track-container">
+          <div class="carousel-track">
+            <!-- Slide 1 -->
+            <article class="carousel-slide">
+              <div class="card glass-card">
+                <div class="card-media">
+                  <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80" alt="Concert light setup" class="responsive-img">
+                  <span class="category-pill">Live Music</span>
+                </div>
+                <div class="card-body">
+                  <span class="card-date">Aug 18 • 19:30 BST</span>
+                  <h3 class="card-title">Midnight Echoes Soundscape</h3>
+                  <p class="card-text">An immersive indie electronic showcase featuring regional synthesists and visual artists.</p>
+                  <div class="card-footer">
+                    <span class="card-price">From £35</span>
+                    <a href="booking.html?event=Midnight%20Echoes" class="btn btn-outline btn-sm">Get Tickets</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <!-- Slide 2 -->
+            <article class="carousel-slide">
+              <div class="card glass-card">
+                <div class="card-media">
+                  <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80" alt="Street food stall cooking" class="responsive-img">
+                  <span class="category-pill">Food & Drink</span>
+                </div>
+                <div class="card-body">
+                  <span class="card-date">Aug 21 - 23 • All Day</span>
+                  <h3 class="card-title">Street Eats & Craft Beats</h3>
+                  <p class="card-text">Over 40 artisanal food vendors accompanied by live acoustic sets in Old Town Square.</p>
+                  <div class="card-footer">
+                    <span class="card-price">Free Entry</span>
+                    <a href="booking.html?event=Street%20Eats" class="btn btn-outline btn-sm">Reserve Spot</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <!-- Slide 3 -->
+            <article class="carousel-slide">
+              <div class="card glass-card">
+                <div class="card-media">
+                  <img src="https://images.unsplash.com/photo-1561489401-fc2876ced162?auto=format&fit=crop&w=600&q=80" alt="Creative design workshop" class="responsive-img">
+                  <span class="category-pill">Workshop</span>
+                </div>
+                <div class="card-body">
+                  <span class="card-date">Aug 28 • 11:00 BST</span>
+                  <h3 class="card-title">Analog Modular Synth Workshop</h3>
+                  <p class="card-text">Hands-on masterclass in sound synthesis led by industry audio engineers.</p>
+                  <div class="card-footer">
+                    <span class="card-price">From £20</span>
+                    <a href="booking.html?event=Modular%20Synth%20Workshop" class="btn btn-outline btn-sm">Book Spot</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tagline">Curated Passions</span>
+          <h2 class="section-title">Explore by Category</h2>
+        </div>
+        <div class="category-grid">
+          <a href="discover.html?cat=Concerts" class="category-card">
+            <div class="category-icon">🎸</div>
+            <h3>Concerts & Gigs</h3>
+            <p>12 Events</p>
+          </a>
+          <a href="discover.html?cat=Festivals" class="category-card">
+            <div class="category-icon">🎪</div>
+            <h3>Festivals</h3>
+            <p>5 Events</p>
+          </a>
+          <a href="discover.html?cat=Workshops" class="category-card">
+            <div class="category-icon">🎨</div>
+            <h3>Workshops</h3>
+            <p>8 Events</p>
+          </a>
+          <a href="discover.html?cat=Street" class="category-card">
+            <div class="category-icon">🎭</div>
+            <h3>Street Culture</h3>
+            <p>15 Events</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section section-cream">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tagline">Community Voices</span>
+          <h2 class="section-title">What Attendees Say</h2>
+        </div>
+        <div class="grid grid-3">
+          <div class="testimonial-card">
+            <p class="quote">"Urban Pulse transformed how my friends and I spend weekends. The interactive guide made PulseFest smooth and unforgettable!"</p>
+            <div class="author">
+              <strong>Elena Rostova</strong>
+              <span>Local Music Fan</span>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="quote">"Booking tickets with real-time discounts and getting dynamic scheduling updates right on my phone is unbeatable."</p>
+            <div class="author">
+              <strong>Marcus Vance</strong>
+              <span>Event Photographer</span>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="quote">"As an independent venue promoter, Urban Pulse gives us the slick platform our local acts deserve."</p>
+            <div class="author">
+              <strong>Sarah Jenkins</strong>
+              <span>Creative Director</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="section section-accent text-center">
+      <div class="container">
+        <h2 class="title-light">Never Miss a Beat</h2>
+        <p class="lead-light">Subscribe to get weekly underground event drops and promo codes delivered to your inbox.</p>
+        <form id="newsletter-form" class="newsletter-form" aria-label="Subscribe to newsletter">
+          <div class="form-group-inline">
+            <input type="email" placeholder="Enter your email address" aria-label="Email Address" required>
+            <button type="submit" class="btn btn-dark">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand-logo">
+          <span class="logo-icon">⚡</span>
+          <span class="logo-text">URBAN<span>PULSE</span></span>
+        </a>
+        <p>Connecting urban culture seekers with live performances, authentic markets, and underground soundscapes.</p>
+      </div>
+      <div class="footer-nav">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover Events</a></li>
+          <li><a href="festival.html">Festival Guide</a></li>
+          <li><a href="booking.html">Book Tickets</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact & Support</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Pulse</h4>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Twitter">X</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Urban Pulse Ltd. All rights reserved. Coursework Project.</p>
+    </div>
+  </footer>
+
+  <!-- Floating Back To Top Button -->
+  <button id="back-to-top" class="btn-floating" aria-label="Scroll back to top of page" type="button">&uarr;</button>
+
+  <!-- jQuery & Main JS -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

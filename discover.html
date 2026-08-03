@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover concerts, festivals, workshops and street culture in your city on Urban Pulse.">
+  <title>Urban Pulse | Discover Events</title>
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-theme="light">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="navbar-sticky" id="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Urban Pulse Home">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">URBAN<span>PULSE</span></span>
+      </a>
+      <nav class="nav-menu" id="primary-navigation" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="discover.html" class="nav-link active" aria-current="page">Discover Events</a></li>
+          <li><a href="festival.html" class="nav-link">Festival Guide</a></li>
+          <li><a href="booking.html" class="nav-link">Tickets & Booking</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="btn-icon" aria-label="Toggle Dark/Light Mode" type="button"><span class="theme-icon">🌙</span></button>
+        <a href="booking.html" class="btn btn-primary btn-sm">Reserve Now</a>
+        <button class="mobile-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle Navigation Menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-header">
+      <div class="container">
+        <h1>Discover City Events</h1>
+        <p>Filter through live music, workshops, food markets, and underground experiences.</p>
+      </div>
+    </section>
+
+    <!-- Search & Filter Controls -->
+    <section class="section-sm search-section">
+      <div class="container">
+        <div class="search-filter-card glass-card">
+          <div class="search-input-group">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="event-search" placeholder="Search by keyword, artist, or venue..." aria-label="Search Events">
+          </div>
+          <div class="filter-group">
+            <label for="category-filter" class="sr-only">Filter by Category</label>
+            <select id="category-filter">
+              <option value="all">All Categories</option>
+              <option value="Concerts">Concerts & Live Music</option>
+              <option value="Festivals">Festivals</option>
+              <option value="Workshops">Workshops</option>
+              <option value="Markets">Street Markets</option>
+            </select>
+
+            <label for="sort-filter" class="sr-only">Sort By</label>
+            <select id="sort-filter">
+              <option value="date">Sort by Date</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Event Cards Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="events-grid" id="events-container">
+          <!-- Card 1 -->
+          <article class="card event-card" data-category="Concerts" data-price="35" data-title="Midnight Echoes Soundscape">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80" alt="Concert light setup" class="responsive-img">
+              <span class="category-pill">Concerts</span>
+            </div>
+            <div class="card-body">
+              <span class="card-date">🗓️ Aug 18, 2026 • 19:30 BST</span>
+              <h3 class="card-title">Midnight Echoes Soundscape</h3>
+              <p class="card-location">📍 Warehouse 8, Arts Quarter</p>
+              <p class="card-text">An immersive indie electronic showcase featuring regional synthesists and ambient artists.</p>
+              <div class="card-footer">
+                <span class="card-price">£35.00</span>
+                <a href="booking.html?event=Midnight%20Echoes" class="btn btn-primary btn-sm">Book Ticket</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card event-card" data-category="Festivals" data-price="80" data-title="PulseFest Main Stage 2026">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=600&q=80" alt="Festival stage crowd" class="responsive-img">
+              <span class="category-pill">Festivals</span>
+            </div>
+            <div class="card-body">
+              <span class="card-date">🗓️ Aug 14 - 16, 2026</span>
+              <h3 class="card-title">PulseFest Main Stage 2026</h3>
+              <p class="card-location">📍 Central City Park Grounds</p>
+              <p class="card-text">Three days of international headliners, digital installation art, and street food hubs.</p>
+              <div class="card-footer">
+                <span class="card-price">£80.00</span>
+                <a href="booking.html?event=PulseFest%20Main%20Stage" class="btn btn-primary btn-sm">Book Ticket</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card event-card" data-category="Markets" data-price="0" data-title="Street Eats & Craft Beats">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80" alt="Street food vendor" class="responsive-img">
+              <span class="category-pill">Markets</span>
+            </div>
+            <div class="card-body">
+              <span class="card-date">🗓️ Aug 21 - 23, 2026</span>
+              <h3 class="card-title">Street Eats & Craft Beats</h3>
+              <p class="card-text">Over 40 artisanal food vendors accompanied by live acoustic sets in Old Town Square.</p>
+              <p class="card-location">📍 Old Town Public Square</p>
+              <div class="card-footer">
+                <span class="card-price">Free Entry</span>
+                <a href="booking.html?event=Street%20Eats" class="btn btn-primary btn-sm">Reserve Spot</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="card event-card" data-category="Workshops" data-price="20" data-title="Analog Modular Synth Workshop">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1561489401-fc2876ced162?auto=format&fit=crop&w=600&q=80" alt="Synthesizer machine" class="responsive-img">
+              <span class="category-pill">Workshops</span>
+            </div>
+            <div class="card-body">
+              <span class="card-date">🗓️ Aug 28, 2026 • 11:00 BST</span>
+              <h3 class="card-title">Analog Modular Synth Workshop</h3>
+              <p class="card-location">📍 SoundLab Studios</p>
+              <p class="card-text">Hands-on masterclass in analog sound synthesis led by industry audio engineers.</p>
+              <div class="card-footer">
+                <span class="card-price">£20.00</span>
+                <a href="booking.html?event=Modular%20Synth%20Workshop" class="btn btn-primary btn-sm">Book Spot</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="card event-card" data-category="Concerts" data-price="25" data-title="Underground Jazz Collective">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=600&q=80" alt="Jazz saxophone player" class="responsive-img">
+              <span class="category-pill">Concerts</span>
+            </div>
+            <div class="card-body">
+              <span class="card-date">🗓️ Sep 02, 2026 • 20:00 BST</span>
+              <h3 class="card-title">Underground Jazz Collective</h3>
+              <p class="card-location">📍 The Velvet Cellar</p>
+              <p class="card-text">A smooth evening of contemporary jazz fusion, brass improvisation, and vintage vinyl vibes.</p>
+              <div class="card-footer">
+                <span class="card-price">£25.00</span>
+                <a href="booking.html?event=Underground%20Jazz" class="btn btn-primary btn-sm">Book Ticket</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="card event-card" data-category="Workshops" data-price="15" data-title="Urban Photography Night Walk">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1502982720700-bfff97f2ecac?auto=format&fit=crop&w=600&q=80" alt="Night street camera photo" class="responsive-img">
+              <span class="category-pill">Workshops</span>
+            </div>
+            <div class="card-body">
+              <span class="card-date">🗓️ Sep 05, 2026 • 21:00 BST</span>
+              <h3 class="card-title">Urban Photography Night Walk</h3>
+              <p class="card-location">📍 Docklands Promenade</p>
+              <p class="card-text">Explore long-exposure photography and neon architecture capture techniques.</p>
+              <div class="card-footer">
+                <span class="card-price">£15.00</span>
+                <a href="booking.html?event=Urban%20Photography" class="btn btn-primary btn-sm">Book Spot</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div id="no-results" class="text-center hidden margin-top-lg">
+          <h3>No events match your criteria</h3>
+          <p>Try resetting your search query or selecting another category.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Urban Pulse Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="btn-floating" aria-label="Scroll back to top" type="button">&uarr;</button>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

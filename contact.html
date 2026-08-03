@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact the Urban Pulse team for support, press inquiries, or venue partnerships.">
+  <title>Urban Pulse | Contact Us</title>
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-theme="light">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="navbar-sticky" id="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Urban Pulse Home">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">URBAN<span>PULSE</span></span>
+      </a>
+      <nav class="nav-menu" id="primary-navigation" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="discover.html" class="nav-link">Discover Events</a></li>
+          <li><a href="festival.html" class="nav-link">Festival Guide</a></li>
+          <li><a href="booking.html" class="nav-link">Tickets & Booking</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link active" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="btn-icon" aria-label="Toggle Dark/Light Mode" type="button"><span class="theme-icon">🌙</span></button>
+        <a href="booking.html" class="btn btn-primary btn-sm">Reserve Now</a>
+        <button class="mobile-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle Navigation Menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-header">
+      <div class="container text-center">
+        <h1>Get in Touch</h1>
+        <p>Have questions regarding tickets, venue partnerships, or technical issues?</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid grid-2">
+        <!-- Contact Info Box -->
+        <div class="glass-card padding-lg">
+          <h2>Contact Information</h2>
+          <p>Our support team is available Monday through Friday, 09:00 - 18:00 BST.</p>
+          
+          <ul class="contact-info-list margin-top-md">
+            <li><strong>📍 Address:</strong> 100 Pulse Avenue, Warehouse District, UK</li>
+            <li><strong>📧 Email:</strong> support@urbanpulse-events.co.uk</li>
+            <li><strong>📞 Phone:</strong> +44 (0) 20 7946 0912</li>
+          </ul>
+
+          <div class="margin-top-lg">
+            <h3>Venue Operators</h3>
+            <p>Want to list your upcoming festival or concert on Urban Pulse? Email our promoter team directly at <code>promoters@urbanpulse-events.co.uk</code>.</p>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="glass-card padding-lg">
+          <h2>Send Us a Message</h2>
+          <form id="general-contact-form">
+            <div class="form-control">
+              <label for="contact-name">Name</label>
+              <input type="text" id="contact-name" required placeholder="Your full name">
+            </div>
+            <div class="form-control">
+              <label for="contact-email">Email</label>
+              <input type="email" id="contact-email" required placeholder="Your email address">
+            </div>
+            <div class="form-control">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" rows="4" required placeholder="How can we help you?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Urban Pulse Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="btn-floating" aria-label="Scroll back to top" type="button">&uarr;</button>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

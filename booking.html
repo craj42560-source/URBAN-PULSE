@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book tickets for Urban Pulse events. Real-time form validation and dynamic pricing.">
+  <title>Urban Pulse | Ticket Reservation</title>
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-theme="light">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="navbar-sticky" id="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Urban Pulse Home">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">URBAN<span>PULSE</span></span>
+      </a>
+      <nav class="nav-menu" id="primary-navigation" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="discover.html" class="nav-link">Discover Events</a></li>
+          <li><a href="festival.html" class="nav-link">Festival Guide</a></li>
+          <li><a href="booking.html" class="nav-link active" aria-current="page">Tickets & Booking</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="btn-icon" aria-label="Toggle Dark/Light Mode" type="button"><span class="theme-icon">🌙</span></button>
+        <a href="booking.html" class="btn btn-primary btn-sm">Reserve Now</a>
+        <button class="mobile-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle Navigation Menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-header">
+      <div class="container">
+        <h1>Ticket Reservation</h1>
+        <p>Complete your booking below. Prices update dynamically based on ticket tier and promo code.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="booking-grid">
+          <!-- Form Column -->
+          <div class="booking-form-wrapper glass-card padding-lg">
+            <h2>Reservation Details</h2>
+            
+            <form id="ticket-booking-form" novalidate>
+              <!-- Full Name -->
+              <div class="form-control">
+                <label for="full-name">Full Name <span class="required">*</span></label>
+                <input type="text" id="full-name" name="fullName" placeholder="e.g., Jane Doe" required>
+                <span class="error-msg" id="err-full-name"></span>
+              </div>
+
+              <!-- Email -->
+              <div class="form-control">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="e.g., jane@example.com" required>
+                <span class="error-msg" id="err-email"></span>
+              </div>
+
+              <!-- Phone Number -->
+              <div class="form-control">
+                <label for="phone">Phone Number <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="e.g., +44 7123 456789" required>
+                <span class="error-msg" id="err-phone"></span>
+              </div>
+
+              <!-- Select Event -->
+              <div class="form-control">
+                <label for="event-select">Select Event <span class="required">*</span></label>
+                <select id="event-select" name="eventSelect" required>
+                  <option value="">-- Choose an Event --</option>
+                  <option value="PulseFest Main Stage 2026">PulseFest Main Stage 2026</option>
+                  <option value="Midnight Echoes Soundscape">Midnight Echoes Soundscape</option>
+                  <option value="Analog Modular Synth Workshop">Analog Modular Synth Workshop</option>
+                  <option value="Street Eats & Craft Beats">Street Eats & Craft Beats</option>
+                </select>
+                <span class="error-msg" id="err-event-select"></span>
+              </div>
+
+              <!-- Ticket Type -->
+              <div class="form-control">
+                <label for="ticket-type">Ticket Tier <span class="required">*</span></label>
+                <select id="ticket-type" name="ticketType" required>
+                  <option value="general" data-price="35">General Admission (£35)</option>
+                  <option value="vip" data-price="80">VIP Access (£80)</option>
+                  <option value="workshop" data-price="20">Workshop Pass (£20)</option>
+                </select>
+                <span class="error-msg" id="err-ticket-type"></span>
+              </div>
+
+              <!-- Quantity -->
+              <div class="form-control">
+                <label for="quantity">Quantity (1 to 10) <span class="required">*</span></label>
+                <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" required>
+                <span class="error-msg" id="err-quantity"></span>
+              </div>
+
+              <!-- Promo Code -->
+              <div class="form-control">
+                <label for="promo-code">Promo Code</label>
+                <div class="inline-input-group">
+                  <input type="text" id="promo-code" name="promoCode" placeholder="Try URBAN10 or SAVE20">
+                  <button type="button" id="apply-promo-btn" class="btn btn-outline">Apply</button>
+                </div>
+                <span class="help-text">Valid codes: <code>URBAN10</code> (10%), <code>SAVE20</code> (20%), <code>VIP15</code> (15%)</span>
+                <span class="error-msg" id="err-promo-code"></span>
+                <span class="success-msg" id="succ-promo-code"></span>
+              </div>
+
+              <!-- VIP Lounge Checkbox -->
+              <div class="form-control checkbox-control">
+                <input type="checkbox" id="vip-lounge" name="vipLounge">
+                <label for="vip-lounge">Add Backstage Lounge Pass (+£25 per ticket)</label>
+              </div>
+
+              <!-- Special Requests -->
+              <div class="form-control">
+                <label for="special-requests">Special Requests / Accessibility Needs</label>
+                <textarea id="special-requests" name="specialRequests" rows="3" placeholder="Wheelchair access, dietary requests, etc."></textarea>
+              </div>
+
+              <!-- Terms Checkbox -->
+              <div class="form-control checkbox-control">
+                <input type="checkbox" id="terms-check" name="termsCheck" required>
+                <label for="terms-check">I accept the Terms & Conditions and Event Guidelines <span class="required">*</span></label>
+                <span class="error-msg" id="err-terms-check"></span>
+              </div>
+
+              <!-- Buttons -->
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Confirm Reservation</button>
+                <button type="reset" id="reset-form-btn" class="btn btn-outline btn-block margin-top-xs">Reset Form</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Dynamic Receipt Summary & Storage Area -->
+          <div class="booking-summary-wrapper">
+            <div class="glass-card padding-lg sticky-card">
+              <h3>Booking Summary</h3>
+              <div class="summary-line">
+                <span>Selected Event:</span>
+                <strong id="summary-event">None selected</strong>
+              </div>
+              <div class="summary-line">
+                <span>Ticket Tier:</span>
+                <span id="summary-tier">General Admission</span>
+              </div>
+              <div class="summary-line">
+                <span>Base Price:</span>
+                <span id="summary-base">£35.00</span>
+              </div>
+              <div class="summary-line">
+                <span>Quantity:</span>
+                <span id="summary-qty">1</span>
+              </div>
+              <div class="summary-line">
+                <span>Lounge Add-on:</span>
+                <span id="summary-addon">£0.00</span>
+              </div>
+              <div class="summary-line">
+                <span>Discount Applied:</span>
+                <span id="summary-discount" class="text-accent">-£0.00</span>
+              </div>
+              <hr class="divider">
+              <div class="summary-line total-line">
+                <span>Total Amount:</span>
+                <strong id="summary-total" class="total-price">£35.00</strong>
+              </div>
+
+              <!-- Stored Reservation Box -->
+              <div id="stored-reservation-box" class="stored-box margin-top-md hidden">
+                <h4>Active Saved Reservation</h4>
+                <div id="stored-details"></div>
+                <button id="clear-storage-btn" class="btn btn-danger btn-sm margin-top-sm">Clear Active Reservation</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Urban Pulse Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="btn-floating" aria-label="Scroll back to top" type="button">&uarr;</button>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>
