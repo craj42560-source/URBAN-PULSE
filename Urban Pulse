@@ -1,0 +1,30 @@
+# ⚡ Urban Pulse — Local Event & Concert Platform
+**Client-Side Development (Coursework Two)**
+*Module:* COM109 Client-Side Development  
+*Submission Date:* Noon, 13/08/2026  
+
+
+## 📖 Project Overview
+**Urban Pulse** is a contemporary, accessible multi-page web platform designed for discovering local city culture, live concerts, underground synth workshops, and street markets. The site features interactive stage lineups using jQuery, dynamic client-side form validation with real-time pricing calculations, and active session persistence.
+
+
+## 📂 Project Architecture & File Structure
+
+```text
+UrbanPulse/
+├── index.html              # Home Hero, Features & Newsletter
+├── discover.html           # Live Filterable Event Directory
+├── festival.html           # Interactive Festival Schedule & Map
+├── booking.html            # Ticket Form & Dynamic Price Summary
+├── about.html              # Mission Statement & Team Responsibilities
+├── contact.html            # General Inquiry Form & Contacts
+├── css/
+│   ├── style.css           # Core Design System & CSS Variables
+│   ├── responsive.css      # Mobile, Tablet & Desktop Layouts
+│   └── animations.css      # Keyframes & Glassmorphism Effects
+├── js/
+│   ├── main.js             # Navigation, Counter, Dark Mode
+│   ├── festival.js         # jQuery Festival Schedule & Map Engine
+│   ├── booking.js          # Regex Form Validation & Pricing Logic
+│   └── storage.js          # SessionStorage Module
+└── README.md               # Documentation & Member Roles
